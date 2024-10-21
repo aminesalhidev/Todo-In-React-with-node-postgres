@@ -1,0 +1,109 @@
+/* Stile per il corpo della pagina */
+body {
+  font-family: 'Arial', sans-serif; /* Font sans-serif */
+  background-color: #ffffff; /* Colore di sfondo chiaro */
+  margin: 0; /* Rimuove margini */
+  padding: 20px; /* Padding per il corpo */
+}
+
+
+/* Contenitore principale */
+.container {
+  max-width: 600px; /* Larghezza massima del contenitore */
+  margin: 0 auto; /* Centra il contenitore */
+  background-color: #ffffff; /* Colore di sfondo bianco */
+  border-radius: 8px; /* Raggio del bordo */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra */
+  padding: 20px; /* Padding interno */
+}
+
+
+/* Titolo principale */
+h1 {
+  font-size: 2rem; /* Dimensione del font del titolo */
+  color: #333; /* Colore del testo */
+  text-align: center; /* Allinea il titolo al centro */
+  margin-bottom: 20px; /* Margine sotto il titolo */
+}
+
+
+/* Stile per il campo di input */
+input[type="text"] {
+  width: calc(100% - 22px); /* Larghezza dell'input */
+  padding: 10px; /* Padding interno */
+  border: 1px solid #048af7; /* Bordo dell'input */
+  border-radius: 5px; /* Raggio del bordo */
+  font-size: 1rem; /* Dimensione del font */
+  margin-bottom: 10px; /* Margine sotto l'input */
+}
+
+
+/* Lista delle attività */
+ul {
+  list-style: none; /* Rimuove i pallini della lista */
+  padding: 0; /* Rimuove il padding */
+  margin: 20px 0; /* Margine sopra e sotto la lista */
+}
+
+
+/* Stile per gli elementi della lista */
+li {
+  background-color: #b6c0c913; /* Colore di sfondo per gli elementi */
+  border: 1px solid #ddd; /* Bordo degli elementi */
+  border-radius: 4px; /* Raggio del bordo */
+  margin-bottom: 10px; /* Margine sotto l'elemento */
+  padding: 10px; /* Padding interno */
+  display: flex; /* Flexbox per l'allineamento */
+  justify-content: space-between; /* Spaziatura tra gli elementi */
+  align-items: center; /* Allineamento verticale */
+  font-weight: small;
+}
+
+/* Stile per il titolo dell'attività */
+li span {
+  color: #333; /* Colore del testo */
+  font-size: 1rem; /* Dimensione del font */
+  flex-grow: 1; /* Permette all'elemento di espandersi */
+}
+
+
+.SottoTitolo {
+  font-size: larger;
+  color: #005fdb;
+  font-weight: small;
+  width: 100 px;
+} 
+
+
+/* Pulsante per gestire attività */
+button {
+  width: 100px;
+  height: 34px;
+  padding: 10px; /* Padding del pulsante */
+  background-color: #0a95f10e; /* Colore di sfondo */
+  color: rgb(0, 115, 255); /* Colore del testo */
+  border: none; /* Rimuove il bordo */
+  border-radius: 4px; /* Raggio del bordo */
+  cursor: pointer; 
+  transition: background-color 0.4s; 
+  width: 20%; 
+  margin-right: 2px;
+  font-weight: small;
+}
+
+
+.ButtoneModifica {
+  height: 34px;
+  width: 105px;
+}
+
+
+.ButtoneElimina{
+  background-color: #0a95f10e; /* Colore di sfondo */
+}
+
+
+button:hover {
+  background-color: #0486f15d; /* Colore di sfondo al passaggio del mouse */
+  color: rgb(255, 255, 255);
+}
