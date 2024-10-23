@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../App.css'; // Importa il CSS qui
-import { error } from 'console';
+
 
 interface Attivita {
     id: number;
     titolo: string;
     completata: boolean;
-
 }
 
-const GestoreAttivita: React.FC = () => {
 
+const GestoreAttivita: React.FC = () => {
     const [attivita, setAttivita] = useState<Attivita[]>([]);
     const [titoloAttivita, setTitoloAttivita] = useState<string>('');
     const [idAttivitaDaModificare, setIdAttivitaDaModificare] = useState<number | null>(null);
@@ -39,7 +38,7 @@ const GestoreAttivita: React.FC = () => {
             if (idAttivitaDaModificare) {
                 const risposta = await axios.put<Attivita>(`http://localhost:3001/attivita/${idAttivitaDaModificare}`, { titolo: titoloPulito });
                 setAttivita(attivita.map(task => (task.id === idAttivitaDaModificare ? risposta.data : task)));
-                setsuccesso('Modificazione task avvenuta successo');
+                setsuccesso('Modificazione task avvenuta con successo');
                 setIdAttivitaDaModificare(null);
             } else {
                 const risposta = await axios.post<Attivita>('http://localhost:3001/attivita', { titolo: titoloPulito, completata: true });
@@ -59,15 +58,16 @@ const GestoreAttivita: React.FC = () => {
 
         try {
             await axios.delete(`http://localhost:3001/attivita/${id}`);
-            setAttivita(attivita.filter(task => task.id !== id));
-            setsuccesso('To Do eliminata con successo');
+                setAttivita((attivita.filter(task => task.id !== id)));
+                setsuccesso('To Do eliminata con successo');
         } catch (errore) {
-            console.error('Errore nell\'eliminazione della To Do:', errore);
-            seterrore('errore riguardante eliminazione della To Do');
+              console.error('Errore nell\'eliminazione della To Do:', errore);
+                seterrore('errore riguardante eliminazione della To Do');
         }
 
     };
 
+    
     return (
         <div>
             < p className='SottoTitolo'> | <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

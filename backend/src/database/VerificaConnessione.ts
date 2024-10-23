@@ -5,7 +5,8 @@ export const VerificaConnessione = async () => {
     console.log('Connessione riuscita al database');
  } catch (err){
     console.log('Errore di connessione al database');
-    
+    process.exit(1);
+
  }
 
 }

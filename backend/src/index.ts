@@ -1,7 +1,8 @@
-import express, {NextFunction, Request, Response } from 'express';
+import express, {Request, Response } from 'express';
 import VerificaConnessione from './database/VerificaConnessione';
 import pool from './database/db';
 import cors from 'cors';
+
 const app = express();
 const port = 3001;
 
@@ -15,15 +16,9 @@ app.use(cors({
 }));
 
 
-
-//creazione del middleware ,
-
-
-
-
-
 // Route per ottenere tutte le attività
 app.get('/attivita', async (req: Request, res: Response) => {
+   
     try { 
         const risultato = await pool.query('SELECT * FROM attivita');
         res.json(risultato.rows);
@@ -53,7 +48,6 @@ app.post('/attivita', async (req: Request, res: Response) => {
 app.put('/attivita/:id', async (req: Request, res: Response) => {
     const taskId = parseInt(req.params.id);
     const { titolo, completata } = req.body;
-
     try {
         const risultato = await pool.query(
             'UPDATE attivita SET titolo = $1, completata = $2, data_modifica = CURRENT_TIMESTAMP WHERE id = $3 RETURNING *',
@@ -79,6 +73,7 @@ app.delete('/attivita/:id', async (req: Request, res: Response) => {
         res.status(500).json({ error: 'Problema nell\'eliminazione della task' });
     }
 });
+
 
 // Avvio del server
 app.listen(port, async () => {
