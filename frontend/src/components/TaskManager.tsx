@@ -87,13 +87,15 @@ const GestoreAttivita: React.FC = () => {
 
             <ul>    
                 {attivita.map(task => (
+
                     <li key={task.id}>
                         <span  >{task.titolo}</span>
                         <span>{task.completata}</span>
                         <button className='ButtoneModifica' onClick={() => { setIdAttivitaDaModificare(task.id); setTitoloAttivita(task.titolo);}}> Modifica</button> 
                         <button className='ButtoneElimina'  onClick={() => eliminaAttivita(task.id)}>Elimina</button>
                     </li>
-                ))}
+               
+               ))}
             </ul>
 
         </div>
