@@ -6,7 +6,7 @@ L'obiettivo di questo progetto è sviluppare una semplice applicazione di gestio
 
 1. **Giorno 1: Struttura e funzionalità di base**
     - Creare una semplice applicazione di gestione delle attività in TypeScript.
-    - Utilizzare HTML e CSS per il layout di base.
+    - Utilizzare React per il layout di base.
     - Implementare la logica per aggiungere, modificare e rimuovere attività.
   
 2. **Giorno 2: Funzionalità avanzate**
@@ -54,7 +54,8 @@ L'obiettivo di questo progetto è sviluppare una semplice applicazione di gestio
 - Non è necessario usare framework come React o Angular.
 - Non è richiesto gestire errori complessi o scrivere unit test.
 
-## Istruzioni per l'Installazione
+### Istruzioni per l'Installazione
+- nmp install -y
 
 1. **Clona il repository**:
    ```bash
