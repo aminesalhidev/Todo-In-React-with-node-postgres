@@ -70,7 +70,6 @@ L'obiettivo di questo progetto è sviluppare una semplice applicazione di gestio
 
 #### Validazione:
 - Implementa una semplice validazione per evitare l'aggiunta di attività vuote.
-
 ## Dettagli tecnici:
 - Il progetto deve essere sviluppato utilizzando **solo TypeScript**, **REact** e **CSS**.
 
@@ -88,4 +87,10 @@ Clona il repository del progetto nel tuo ambiente locale:
 ```bash
 git clone https://github.com/aminesalhidev/Todo-In-React-with-node-postgres.git
 cd to-do-list
+```
+
+
+### La Visualizza dell'applicazione TODO :
+
+![Immagine di esempio](ImmagineApplicazioneCompleta/Immagine 2025-02-06 154028.png)
 
