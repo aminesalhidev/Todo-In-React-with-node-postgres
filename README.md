@@ -92,5 +92,5 @@ cd to-do-list
 
 ### La Visualizza dell'applicazione TODO :
 
-![Immagine di esempio](ImmagineApplicazioneCompleta/Immagine 2025-02-06 154028.png)
+![Immagine di esempio](ImmagineApplicazioneCompleta/Immagine%202025-02-06%20154028.png)
 
