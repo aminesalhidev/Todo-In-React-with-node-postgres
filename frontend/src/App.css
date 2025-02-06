@@ -11,7 +11,7 @@ body {
 .container {
   max-width: 600px; /* Larghezza massima del contenitore */
   margin: 0 auto; /* Centra il contenitore */
-  background-color: #ffffff; /* Colore di sfondo bianco */
+  background-color: #bb9c9c; /* Colore di sfondo bianco */
   border-radius: 8px; /* Raggio del bordo */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra */
   padding: 20px; /* Padding interno */

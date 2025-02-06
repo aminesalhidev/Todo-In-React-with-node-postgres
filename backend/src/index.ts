@@ -1,3 +1,4 @@
+
 import express, {Request, Response } from 'express';
 import VerificaConnessione from './database/VerificaConnessione';
 import pool from './database/db';
@@ -6,8 +7,10 @@ import cors from 'cors';
 const app = express();
 const port = 3001;
 
+
 app.use(express.json());
 app.use(cors());
+
 
 app.use(cors({
     origin: 'http://localhost:3000',
@@ -17,8 +20,7 @@ app.use(cors({
 
 
 // Route per ottenere tutte le attività
-app.get('/attivita', async (req: Request, res: Response) => {
-   
+app.get('/attivita', async (req: Request, res: Response) => { 
     try { 
         const risultato = await pool.query('SELECT * FROM attivita');
         res.json(risultato.rows);

@@ -1,12 +1,12 @@
 # Applicazione di Gestione delle Attività (To-Do List)
 
-L'obiettivo di questo progetto è sviluppare una semplice applicazione di gestione delle attività (to-do list) utilizzando TypeScript, HTML e CSS. Questo esercizio aiuterà a comprendere i concetti fondamentali di TypeScript e sviluppo web, oltre a migliorare le competenze nella manipolazione del DOM.
+L'obiettivo di questo progetto è sviluppare una semplice applicazione di gestione delle attività (to-do list) utilizzando TypeScript, React  e CSS. Questo esercizio aiuterà a comprendere i concetti fondamentali di TypeScript e sviluppo web, oltre a migliorare le competenze nella manipolazione del DOM.
 
 ## Obiettivi del Progetto
 
 1. **Giorno 1: Struttura e funzionalità di base**
     - Creare una semplice applicazione di gestione delle attività in TypeScript.
-    - Utilizzare React per il layout di base.
+    - Utilizzare React per il layout di base (opzionale, se si preferisce lavorare senza framework, è possibile usare solo HTML, CSS e TypeScript).
     - Implementare la logica per aggiungere, modificare e rimuovere attività.
   
 2. **Giorno 2: Funzionalità avanzate**
@@ -22,9 +22,26 @@ L'obiettivo di questo progetto è sviluppare una semplice applicazione di gestio
 #### Inizializzazione del progetto:
 - Configura un nuovo progetto utilizzando npm e TypeScript.
 - Includi una configurazione minima di TypeScript (`tsconfig.json`).
+  - Esempio di `tsconfig.json`:
+    ```json
+    {
+      "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "outDir": "./dist"
+      },
+      "include": ["src/**/*"],
+      "exclude": ["node_modules"]
+    }
+    ```
+
 
 #### Interfaccia utente di base:
-- Crea una interfaccia In React:
+- Crea una interfaccia in **React**:
   - Un campo di testo per aggiungere nuove attività.
   - Una lista che mostri le attività aggiunte.
   - Ogni attività deve avere un pulsante "Modifica" e un pulsante "Elimina".
@@ -45,19 +62,30 @@ L'obiettivo di questo progetto è sviluppare una semplice applicazione di gestio
 
 #### Persistenza dei dati (opzionale):
 - Usa `localStorage` per salvare lo stato delle attività, così che non vengano perse al ricaricamento della pagina.
+  - Esempio di come utilizzare `localStorage`:
+    ```ts
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+    const savedTasks = JSON.parse(localStorage.getItem('tasks') || '[]');
+    ```
 
 #### Validazione:
 - Implementa una semplice validazione per evitare l'aggiunta di attività vuote.
 
-### Dettagli tecnici:
-- Il progetto deve essere sviluppato utilizzando solo TypeScript, HTML e CSS.
-- Non è necessario usare framework come React o Angular.
-- Non è richiesto gestire errori complessi o scrivere unit test.
+## Dettagli tecnici:
+- Il progetto deve essere sviluppato utilizzando **solo TypeScript**, **REact** e **CSS**.
 
-### Istruzioni per l'Installazione
-- nmp install -y
+## Istruzioni per l'Installazione
+- Guida per installazione dei moduli 
 
-1. **Clona il repository**:
-   ```bash
-   git clone https://github.com/tuo-utente/to-do-list.git
-   cd to-do-list
+```
+
+-npm install -y
+
+```
+
+### 1. Clonare il repository:
+Clona il repository del progetto nel tuo ambiente locale:
+```bash
+git clone https://github.com/aminesalhidev/Todo-In-React-with-node-postgres.git
+cd to-do-list
+
